@@ -1,0 +1,84 @@
+>>> fd=open("a.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IOError: [Errno 2] No such file or directory: 'a.txt'
+>>> fd=open("a.txt")
+>>> print fd
+<open file 'a.txt', mode 'r' at 0x0000000002E34150>
+>>> fd
+<open file 'a.txt', mode 'r' at 0x0000000002E34150>
+>>> fd.read()
+'asdafda'
+>>> fd.read()
+'\ndsfs\neee\namaresh'
+>>> fd.read()
+''
+>>> import io
+>>> fd=io.FileIO("a.txt")
+>>> fd
+<_io.FileIO name='a.txt' mode='rb'>
+>>> fd.read(10)
+'asdafda\r\nd'
+>>> fd.read(10)
+'sfs\r\neee\r\n'
+>>> fd.seek(10,0)
+10L
+>>> fd.seek(20,1)
+30L
+>>> fd.seek(10,2)
+37L
+>>> fd.seek(-10,2)
+17L
+
+If want to help on module then
+import tempfile
+help(tempfile)
+
+>>> fd=open("a.txt")
+>>> fd.fileno()
+3
+
+import shutil
+import filecmp
+(see prog fileOp_shutilop.py)
+
+>>> import os
+>>> os.path.abspath("ebooks")
+'D:\\F DATA\\python_class\\ebooks'
+>>> os.path.basename("D:\\F DATA\\python_class\\ebooks")
+'ebooks'
+>>> os.path.dirname("D:\\F DATA\\python_class\\ebooks")
+'D:\\F DATA\\python_class'
+>>> os.path.exists("D:\\F DATA\\python_class\\ebooks")
+True
+>>> os.path.exists("D:\\F DATA\\python_class\\ebooks2")
+False
+
+expandvars
+
+>>> import os
+>>> os.path.isdir("D:\F DATA\python_class")
+True
+>>> os.path.getatime("D:\F DATA\python_class")
+1540016052.9085383
+>>> os.path.getctime("D:\F DATA\python_class")
+1537862991.4272273
+>>> os.path.getmtime("D:\F DATA\python_class")
+1540016052.9085383
+>>> os.path.getatime("D:\F DATA\python_class\conf.txt")
+1539428340.927305
+>>> os.path.getsize("D:\F DATA\python_class\conf.txt")
+100L
+>>> os.path.isfile("D:\F DATA\python_class\conf.txt")
+True
+>>> os.path.lexists("D:\F DATA\python_class\conf.txt")
+True
+>>> os.path.normcase("D:\F DATA\python_class\Conf.txt")
+'d:\\f data\\python_class\\conf.txt'
+>>> os.path.realpath("Conf.txt")
+'D:\\F DATA\\python_class\\Conf.txt'
+>>> os.path.relpath("D:\F DATA\python_class\Conf.txt")
+'Conf.txt'
+
+>>> os.path.split("D:\F DATA\python_class\conf.txt")
+('D:\\F DATA\\python_class', 'conf.txt')

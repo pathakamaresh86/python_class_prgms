@@ -1,0 +1,18 @@
+D:\F DATA\python_class>python day4_assign.py
+Enter string"hello"
+Entered string  hello
+first tow and last two char string  elol
+Enter string"bubble"
+Entered string  bubble
+occurance replaced string bu**le
+Enter two strings"dog","dinner"
+str1= dog
+str2= dinner
+swapped first two character strings dig donner
+Enter two strings"manager","germana"
+str1= manager
+str2= germana
+2nd string is right rotation of 1st
+Enter string"chintoo is not bad boy"
+Entered string  chintoo is not bad boy
+chintoo is good boy

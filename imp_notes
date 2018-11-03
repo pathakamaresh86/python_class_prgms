@@ -1,0 +1,167 @@
+input //method for input 
+x=input("Enter no: ") //in python 2.7
+x=eval(input("Enter no: ")) //in python 3.x
+
+Write python program to accept name from user and greet him with hello <name>
+Write a program to accept two number from user and display their addition 
+WAP to accept string from user and accept the start index, end index and step value and display result of slicing
+Go through presentation 1 from github
+Learning python programming by orally publication check pdf
+
+WAP to accept two numbers from user and display therir power
+WAP to accept string from user and print it in reverse order
+
+WAP to accept string from user and display a string of 1st two and last two characters
+explore more on string help(str)
+WAP to accept string from user replace the occurance of first charater in remaining part of string with *
+bubble=bu**le
+WAP to accept two strings from user and jumbled them [swap the 1st two char of both]
+Dog, Dinner -> Dig, Donner
+
+WAP to accept two strings from user and check if 2nd string is right rotation of 1st, length of two strings are same
+manager, germana
+
+WAP to accept string from user, assume that it contains "not" followed by "bad"
+chintoo is not bad boy
+replace with good
+chintoo is good boy 
+
+ WAP to accept a no from user and print if it is even or odd without using arithmetic operators //bitwise lsb 0 even 1 odd
+ WAP to accept no from user and check if it is multiple of 16 or not without using arithmetic operators(&15)
+ WAP to accept three sides and check if they form triangle or not (sum of two side greater than 3rd side)
+ 
+ WAP to accept a no from user & check if it is multiple of 128
+ WAP to find binary of 1890,32761,4810,7447,121340
+ WAP to accept lower bounf & upper bound from user & display multiple of 5 in it
+ Bitwise program -> move to fucntion
+ range program -> move to function
+ <last week assignment -> move to function
+ 
+ difference in range and xrange refer https://www.geeksforgeeks.org/range-vs-xrange-python/
+ 
+ Write a single function to add 2,3,4,5 numbers.
+ 
+ WAP to play with different types of arguments
+ 
+ Execute atleast 3 scipts using import
+ 
+ 
+ WAP to accept no and check it is prime
+ WAP to accept no from user and print its factorial
+ WAP to accept no and find digits in it
+ 
+ HW
+ Write fact representation of 9
+ WAP to accept two numbers and find all prime no from that range
+ WAP to accept no from user and return sum of digits
+ WAP to accept no from user and return sum of even digits and sum odd digits
+ WAP to accept no from user and return even digits sum - odd digits sum
+ WAP to accept no and print reverse of it
+ 4321
+ 0*10+1=1
+ 1*10+2=12
+ 12*10+3=123
+ 123*10+4=1234
+ 
+ rev_no=0
+ rem=no%10
+ rev_no=rev_no*10 + rem
+ no=no//10
+ 
+ WAP to accept no and check if no is palindrom
+ 
+ WAP to accept no from user and check if it amstrong (no whose sum of digits cube = no)
+ 153=1^3+5^3+3^3
+ 
+ WAP to accept no and display the fibbonacci series till that no
+ 0,1,1,2,3,5,8,13,21
+ 
+make star programs generic, get character from user
+
+WAP to accept lower bound and upper bound from user and print tables of all
+
+HW:WAP to accept range from user and print amstrong no from given range 
+HW:WAP to accept no from user and print if it is special no
+145=1!+4!+5!
+145=1+24+120=145
+HW: go through Presentation 3
+HW: WAP to accept no from user and number of bits to turn on from the rightmost side. Turn on respective rightmost bits
+
+input: 32
+bits: 3
+so 3 (binary 7 0111)
+32 +7 = 39
+2**3-1=8-1=7
+2**5-1=32-1=31
+1<<noofbits
+
+turn on
+no|x
+
+turn off
+no & ~x
+
+toggle
+no^x
+
+WAP to print following pattern
+*				*
+*	*		*	*
+*	*	*	*	*
+
+opposite of above
+*	*	*	*	*
+*	*		*	*
+*				*
+		*
+	*	*	*
+*	*	*	*	*
+	*	*	*
+		*
+WAP to accept string from user and print compression of it 
+aabbbccaaadde
+a2b3c2a3e1
+
+WAP to accept string from user and print count of vowels in it
+
+HW: WAP to accept the list of integers from user and return sum of even number from the given numbers in list
+
+WAP to accept list and retun max and second max number from list without using built in function
+
+HW:WAP to accept list find prime numbers in it
+HW:WAP to accept list and find numbers which appears in fibbonacci seq
+
+WAP to aceept list of numbers from user and sort them using bubble sort
+HW:WAP to aceept list of numbers from user and sort them using selection sort
+
+WAP to accept no and create dictionary of fibbonacci sequence
+HW: WAP to accept no from user and create a dictionary of bit possition and corresponding value at that possition assuming 32 bit integer and consider lsb as starting position
+no=4
+1:0
+2:0
+3:1
+4:0
+5:0
+.
+.
+.
+HW: explore ordered dictionary, use existing module and use different functions
+https://www.geeksforgeeks.org/ordereddict-in-python/
+
+WAP to accept file name and print alternate 10 bytes print first 10 bytes, skip 11-20 bytes print 21-30 and so on
+HW:WAP to accept file name from user and print all lines which are not start with #
+
+HW:github/file handling/config parser/settings.cfg
+check if it parse with current prg
+and then give what user wants
+if server1 details show all details of server1
+if wats server1 ip then just show ip
+
+HW:WAP to accept a filename from user and print alternate 10,10 characters
+0-10, 21-30, 41-50
+11-20,31-40
+
+HW:Go to file handling presentation
+petrol price i/p and print average for each year
+
+HW:WAP to print smallest and longest line

@@ -1,0 +1,9 @@
+#This is configuration file
+#created by amaresh
+#Use
+abc=3
+pqr=5
+#sdf=8
+asd:1
+fr:2
+#end conf

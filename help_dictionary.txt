@@ -1,0 +1,44 @@
+>>> x={"name":"amaresh","age":31,"hobby":"travel"}
+>>> x["name"]
+'amaresh'
+>>> x["name"]="adf"
+>>> x["name"]
+'adf'
+>>> y=dict()
+>>> y
+{}
+>>> x.get("age")
+31
+>>> x.get("age"[,40])
+  File "<stdin>", line 1
+    x.get("age"[,40])
+                ^
+SyntaxError: invalid syntax
+>>> x.get("age",40)
+31
+>>> x.get("age1",40)
+40
+>>> x.has_key("age")
+True
+>>> x.items()
+[('hobby', 'travel'), ('age', 31), ('name', 'adf')]
+>>> x.keys()
+['hobby', 'age', 'name']
+>>> x.values()
+['travel', 31, 'adf']
+>>> x.get(31)
+>>> x.viewitems()
+dict_items([('hobby', 'travel'), ('age', 31), ('name', 'adf')])
+>>> x.viewvalues()
+dict_values(['travel', 31, 'adf'])
+>>> y=dict.fromkeys(x)
+>>> y
+{'hobby': None, 'age': None, 'name': None}
+>>> y=dict.fromkeys(x,["ddd",40,"study"])
+>>> y
+{'hobby': ['ddd', 40, 'study'], 'age': ['ddd', 40, 'study'], 'name': ['ddd', 40, 'study']}
+>>>
+
+
+
+

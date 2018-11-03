@@ -1,0 +1,300 @@
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hello
+
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+lleh
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+.www
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+.google.com
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google.com
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google.com
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google.co
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google.com
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google
+Enter no: 10
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google
+Enter no: 10
+10
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google
+Enter no: hi
+Traceback (most recent call last):
+  File "hello.py", line 21, in <module>
+    z=input("Enter no: ")
+  File "<string>", line 1, in <module>
+NameError: name 'hi' is not defined
+
+D:\python_class>python hello.py
+Hello World
+<type 'str'>
+h
+o
+e
+h
+el
+hlo
+lleh
+hell
+
+
+ll
+olleh
+google
+Enter no: "hi"
+hi
+
+D:\python_class>

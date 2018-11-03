@@ -1,0 +1,174 @@
+D:\>python
+Python 2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:30:26) [MSC v.1500 64 bit (AM
+D64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> x=10
+>>> type(x)
+<type 'int'>
+>>> x="hello"
+>>> type(x)
+<type 'str'>
+>>> x=10+3j
+>>> type(x)
+<type 'complex'>
+>>> x=1000
+>>> id(x)
+33590680L
+>>> y=x
+>>> id(y)
+33590680L
+>>> z=1000
+>>> id(z)
+33590656L
+>>> x=10
+>>> id(x)
+31160032L
+>>> y=10
+>>> id(x)
+31160032L
+>>> x=[1,2,3,4,5]
+>>> x.append(6)
+>>> x
+[1, 2, 3, 4, 5, 6]
+>>> y=x
+>>> y
+[1, 2, 3, 4, 5, 6]
+>>> y.append(7)
+>>> y
+[1, 2, 3, 4, 5, 6, 7]
+>>> x
+[1, 2, 3, 4, 5, 6, 7]
+>>> z=[1,2,3,4,5,6,7]
+>>> id(x)
+33486536L
+>>> id(y)
+33486536L
+>>> id(z)
+32927368L
+>>> y=[1,2,3]
+>>> id<y>
+  File "<stdin>", line 1
+    id<y>
+        ^
+SyntaxError: invalid syntax
+>>> id(y)
+32926344L
+>>> x=[1,2,3,4,5]
+>>> x.append(6)
+>>> x
+[1, 2, 3, 4, 5, 6]
+>>> y=x
+>>> y.append(7)
+>>> y
+[1, 2, 3, 4, 5, 6, 7]
+>>> x=-5
+>>> y=-5
+>>> id(x)
+31160392L
+>>> id(y)
+31160392L
+>>> x=-6
+>>> y=-6
+>>> id(x)
+33590680L
+>>> id(y)
+33590656L
+>>> z=x
+>>> id(z)
+33590680L
+>>> a=10
+>>> b=3
+>>> a**b
+1000
+>>> 5.0/2
+2.5
+>>> 5.0//2
+2.0
+>>> a=10
+>>> a++
+  File "<stdin>", line 1
+    a++
+      ^
+SyntaxError: invalid syntax
+>>> ++a
+10
+>>> +a
+10
+>>> a+
+  File "<stdin>", line 1
+    a+
+     ^
+SyntaxError: invalid syntax
+>>> +++a
+10
+>>> --10
+10
+>>> +-10
+-10
+>>> a++1
+11
+>>> a+-1
+9
+>>> a+++2
+12
+>>>
+
+>>> raw_input("Enter no")
+Enter no10
+'10'
+>>> x=raw_input("Enter no ")
+Enter no 10
+>>> print x
+10
+>>> type(x)
+<type 'str'>
+
+>>> x=raw_input("Enter no ")
+Enter no a
+>>> type(x)
+<type 'str'>
+>>> x=raw_input("Enter no ")
+Enter no xvc
+>>> type(x)
+<type 'str'>
+
+>>> x=raw_input("Enter no ")
+Enter no "acx"
+>>> print x
+"acx"
+>>> type(x)
+<type 'str'>
+
+>>> x=input("Enter no ")
+Enter no 10
+>>> type(x)
+<type 'int'>
+
+>>> x=input("Enter no ")
+Enter no xcv
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 1, in <module>
+NameError: name 'xcv' is not defined
+
+
+>>> x=input("Enter no ")
+Enter no "asd"
+>>> print x
+asd
+>>> type(x)
+<type 'str'>
+
+>>> x=input("Enter no ")
+Enter no [1,2,3,4]
+>>> type(x)
+<type 'list'>
+>>> print x
+[1, 2, 3, 4]
+
+>>> x=eval(input("Enter no "))
+Enter no asd
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<string>", line 1, in <module>
+NameError: name 'asd' is not defined
