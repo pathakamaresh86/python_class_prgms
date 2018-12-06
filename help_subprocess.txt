@@ -1,0 +1,135 @@
+python
+import subprocess
+>>> subprocess.call("dir", shell=True)
+>>> subprocess.call("echo %PATH%", shell=True)
+C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Windows\CCM;C:\Program Files (x86)\WebEx\Productivity Tools;C:\Program Files (x86)\Sennheiser\SoftphoneSDK\;C:\Program Files\PuTTY\;D:\Python27;C:\ProgramData\WebEx\WebEx\Applications;C:\Users\inapathak021\AppData\Local\Microsoft\WindowsApps;
+0
+
+>>> subprocess.call("copy", shell=True) #Setting shell to true causes subprocess to spawn an intermediate shell process and command is run on that shell
+The syntax of the command is incorrect.
+1
+
+#check_call if fails raise exception
+>>> subprocess.check_call("copy", shell=True)
+The syntax of the command is incorrect.
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Python27\lib\subprocess.py", line 190, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command 'copy' returned non-zero exit status 1
+>>> subprocess.check_call("copy a.txt sde.txt", shell=True)
+        1 file(s) copied.
+0
+
+#check_output copies o/p in variable and not shown on console. if exception occurs then shown on console
+>>> x=subprocess.check_output("tasklist", shell=True)
+>>> print x
+
+Image Name                     PID Session Name        Session#    Mem Usage
+========================= ======== ================ =========== ============
+System Idle Process              0 Services                   0          8 K
+System                           4 Services                   0        140 K
+Registry                        96 Services                   0     13,940 K
+smss.exe                       400 Services                   0      1,028 K
+csrss.exe                      572 Services                   0      5,332 K
+wininit.exe                    664 Services                   0      6,660 K
+services.exe                   760 Services                   0     14,064 K
+python.exe                    4872 Console                    8     10,328 K
+cmd.exe                       3488 Console                    8      3,652 K
+tasklist.exe                  5384 Console                    8      8,120 K
+
+#copies o/p of command to file
+>>> fd = open("ddd.txt","w")
+>>> subprocess.check_call("tasklist", stdout=fd, shell=True)
+0
+>>> x=subprocess.Popen("dir",stdout=subprocess.PIPE, shell=True)
+>>> print x
+<subprocess.Popen object at 0x00000000035CF7B8>
+>>> help(x)
+Help on Popen in module subprocess object:
+
+class Popen(__builtin__.object)
+ |  Execute a child program in a new process.
+ 
+>>> x=subprocess.Popen("dir D:\\bkp",stdout=subprocess.PIPE, shell=True)
+>>> print x
+<subprocess.Popen object at 0x0000000001404D30>
+>>> print x.communicate()
+(' Volume in drive D is DATA\r\n Volume Serial Number is 6648-288E\r\n\r\n Directory of D:\\bkp\r\n\r\n09/26/2018  12:38 PM    <DIR>          .\r\n09/26/2018  12:38 PM    <DIR>          ..\r\n09/25/2018  01:47 PM    <DIR>          General_data\r\n               0 File(s)              0 bytes\r\n               3 Dir(s)  320,494,669,824 bytes free\r\n', None)
+
+# error as data is already read from pipe
+>>> print x.communicate()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "D:\Python27\lib\subprocess.py", line 475, in communicate
+    stdout = _eintr_retry_call(self.stdout.read)
+  File "D:\Python27\lib\subprocess.py", line 125, in _eintr_retry_call
+    return func(*args)
+ValueError: I/O operation on closed file
+
+#providing input to wc through communicate
+>>> x=subprocess.Popen("wc",stdout=subprocess.PIPE, stdin=subprocess.PIPE, shell=True)
+>>> print x.communicate("This is amaresh")  #if gives error use   x.communicate(b"This is amaresh")
+o/p:
+('      0       3      15\n', None)
+
+
+import subprocess
+x=subprocess.Popen("cp",stderr=subprocess.PIPE, shell=True)
+print x.communicate()
+o/p:
+(None, "cp: missing file operand\nTry 'cp --help' for more information.\n")
+
+>>> x=subprocess.Popen("asd",stderr=subprocess.PIPE, shell=True)
+>>> print x.communicate()
+
+o/p:
+(None, "'asd' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n")
+
+https://ide.geeksforgeeks.org/
+import subprocess
+def fun1():
+    print("hiiii")
+    
+x=subprocess.Popen(["echo", "hi"],preexec_fn=fun1())
+x.communicate()
+
+o/p:
+hi
+hiiii
+
+#preexec_fn call works only on linux
+    
+	
+#To run a process and read all of its output, set the stdout value to PIPE and call
+communicate().
+
+import subprocess
+print '\nread:'
+proc = subprocess.Popen(['echo', '"to stdout"'], stdout=subprocess.PIPE )
+stdout_value = proc.communicate()[0]
+print '\tstdout:', repr(stdout_value)
+
+o/p:
+read:
+	stdout: '"to stdout"\n'
+
+#set up a pipe to allow the calling program to write data to it, set stdin to PIPE.
+
+print '\nwrite:'
+proc = subprocess.Popen(['cat', '-'], stdin=subprocess.PIPE)
+proc.communicate('\tJay Jay Ram-Krishna Hari to stdin\n')
+
+o/p:
+	Jay Jay Ram-Krishna Hari to stdin
+write:
+
+#setup to do read & write as part of one subprocess
+print '\npopen2:'
+proc = subprocess.Popen(['cat', '-'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+stdout_value = proc.communicate('through stdin to stdout')[0]
+print '\tpass through:', repr(stdout_value)
+
+o/p:
+popen2:
+	pass through: 'through stdin to stdout'

@@ -1,0 +1,84 @@
+>>> import re
+>>> match_str=re.match('a','abcd') #match just begining
+>>> print match_str.start(),match_str.end()
+0 1
+>>> match_str=re.match('xa','abcd')
+>>> match_str
+>>> match_str=re.match('a','abcd')
+>>> match_str
+<_sre.SRE_Match object at 0x0000000003210718>
+>>> match_str=re.match('a','aabcd')
+>>> match_str
+<_sre.SRE_Match object at 0x0000000003210780>
+>>> print match_str.start(),match_str.end()
+0 1
+>>> match_str=re.match('a','bcad')
+>>> match_str
+
+>>> search_str=re.search('a','bcadaaaa') #search first occurance
+>>> print search_str.start(),search_str.end()
+2 3
+
+>>> pattern= 'ab'
+>>> inp_str="ababsdfabaedfabab"
+>>> result=re.findall(pattern,inp_str)
+>>> print result
+['ab', 'ab', 'ab', 'ab', 'ab']
+
+>>> result=re.finditer(pattern,inp_str)
+>>> print result
+<callable-iterator object at 0x0000000001100A90>
+>>> for n in result:
+...     print n
+...
+<_sre.SRE_Match object at 0x0000000002C00718>
+<_sre.SRE_Match object at 0x0000000002C00780>
+<_sre.SRE_Match object at 0x0000000002C00718>
+<_sre.SRE_Match object at 0x0000000002C00780>
+<_sre.SRE_Match object at 0x0000000002C00718>
+
+>>> result=re.finditer(pattern,inp_str)
+>>> for n in result:
+...    print n.start(),n.end()
+...
+0 2
+2 4
+7 9
+13 15
+15 17
+
+>>> pattern="ab"
+>>> inp_str="ababsdfabaedfabab"
+>>> repl="pq"
+>>> new_str=re.sub(pattern,repl,inp_str)
+>>> print new_str
+pqpqsdfpqaedfpqpq
+>>> new_str,number=re.subn(pattern,repl,inp_str)
+>>> print new_str
+pqpqsdfpqaedfpqpq
+>>> print number
+5
+
+
+>>> pattern="ab"
+>>> obj=re.compile(pattern)
+>>> inp_str="abacabab"
+>>> search_str=obj.search(inp_str)
+>>> print search_str
+<_sre.SRE_Match object at 0x0000000002ED0718>
+>>> print search_str.start(),search_str.end()
+0 2
+>>> inp_str="cdfabdfab"
+>>> search_str=obj.search(inp_str)
+>>> print search_str.start(),search_str.end()
+3 5
+
+>>> inp_str="abacabab"
+>>> pattern="AB"
+>>> search_str=re.search(pattern,inp_str)
+>>> search_str
+>>> search_str=re.search(pattern,inp_str,re.IGNORECASE) #flags
+>>> search_str
+<_sre.SRE_Match object at 0x0000000002ED0780>
+>>> print search_str.start(),search_str.end()
+0 2
