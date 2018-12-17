@@ -1,0 +1,103 @@
+D:\F DATA\python_class>python -m pdb add.py
+> d:\f data\python_class\add.py(3)<module>()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) list
+  1     #!/usr/bin/python
+  2     #Write a single function to add 2,3,4,5 numbers.
+  3  -> def add(a,b,c=0,d=0,e=0):
+  4         return (a+b+c+d+e)
+  5     print add(10,20)
+  6     print add(10,20,30)
+  7     print add(10,20,30,40)
+  8     print add(10,20,30,40,50)
+  9
+ 10     '''
+ 11     D:\F DATA\python_class>python add.py
+(Pdb) b 5
+Breakpoint 1 at d:\f data\python_class\add.py:5
+(Pdb) run
+Restarting add.py with arguments:
+
+> d:\f data\python_class\add.py(3)<module>()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) step
+> d:\f data\python_class\add.py(5)<module>()
+-> print add(10,20)
+(Pdb) n
+30
+> d:\f data\python_class\add.py(6)<module>()
+-> print add(10,20,30)
+(Pdb) s
+--Call--
+> d:\f data\python_class\add.py(3)add()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) n
+> d:\f data\python_class\add.py(4)add()
+-> return (a+b+c+d+e)
+(Pdb) p a+b+c+d+e
+60
+(Pdb) n
+--Return--
+> d:\f data\python_class\add.py(4)add()->60
+-> return (a+b+c+d+e)
+(Pdb) n
+60
+> d:\f data\python_class\add.py(7)<module>()
+-> print add(10,20,30,40)
+(Pdb) c
+100
+150
+The program finished and will be restarted
+> d:\f data\python_class\add.py(3)<module>()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) b 5
+Breakpoint 2 at d:\f data\python_class\add.py:5
+(Pdb) c
+> d:\f data\python_class\add.py(5)<module>()
+-> print add(10,20)
+(Pdb) set_trace()
+*** NameError: name 'set_trace' is not defined
+(Pdb) bt
+  d:\python27\lib\bdb.py(400)run()
+-> exec cmd in globals, locals
+  <string>(1)<module>()
+> d:\f data\python_class\add.py(5)<module>()
+-> print add(10,20)
+(Pdb) step
+--Call--
+> d:\f data\python_class\add.py(3)add()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) n
+> d:\f data\python_class\add.py(4)add()
+-> return (a+b+c+d+e)
+(Pdb) bt
+  d:\python27\lib\bdb.py(400)run()
+-> exec cmd in globals, locals
+  <string>(1)<module>()
+  d:\f data\python_class\add.py(5)<module>()
+-> print add(10,20)
+> d:\f data\python_class\add.py(4)add()
+-> return (a+b+c+d+e)
+(Pdb) q
+
+D:\F DATA\python_class>python -m pdb add.py
+> d:\f data\python_class\add.py(3)<module>()
+-> def add(a,b,c=0,d=0,e=0):
+(Pdb) h
+
+Documented commands (type help <topic>):
+========================================
+EOF    bt         cont      enable  jump  pp       run      unt
+a      c          continue  exit    l     q        s        until
+alias  cl         d         h       list  quit     step     up
+args   clear      debug     help    n     r        tbreak   w
+b      commands   disable   ignore  next  restart  u        whatis
+break  condition  down      j       p     return   unalias  where
+
+Miscellaneous help topics:
+==========================
+exec  pdb
+
+Undocumented commands:
+======================
+retval  rv

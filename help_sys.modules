@@ -1,0 +1,29 @@
+>>> import sys
+>>> print sys.modules
+{'copy_reg': <module 'copy_reg' from 'D:\Python27\lib\copy_reg.pyc'>, 'sre_compile': <module 'sre_compile' from 'D:\Python27\lib\sre_compile.pyc'>, 'locale': <module 'locale' from 'D:\Python27\lib\locale.pyc'>, '_sre': <module '_sre' (built-in)>, 'functools': <module 'functools' from 'D:\Python27\lib\functools.pyc'>, 'encodings': <module 'encodings' from 'D:\Python27\lib\encodings\__init__.pyc'>, 'site': <module 'site' from 'D:\Python27\lib\site.pyc'>, '__builtin__': <module '__builtin__' (built-in)>, 'sysconfig': <module 'sysconfig' from 'D:\Python27\lib\sysconfig.pyc'>, 'operator': <module 'operator' (built-in)>, '__main__': <module '__main__' (built-in)>, 'types': <module 'types' from 'D:\Python27\lib\types.pyc'>, 'encodings.encodings': None, 'abc': <module 'abc' from 'D:\Python27\lib\abc.pyc'>, 'encodings.cp437': <module 'encodings.cp437' from 'D:\Python27\lib\encodings\cp437.pyc'>, '_weakrefset': <module '_weakrefset' from 'D:\Python27\lib\_weakrefset.pyc'>, 'errno': <module 'errno' (built-in)>, 'encodings.codecs': None, 'sre_constants': <module 'sre_constants' from 'D:\Python27\lib\sre_constants.pyc'>, 're': <module 're' from 'D:\Python27\lib\re.pyc'>, '_abcoll': <module '_abcoll' from 'D:\Python27\lib\_abcoll.pyc'>, 'ntpath': <module 'ntpath' from 'D:\Python27\lib\ntpath.pyc'>, '_codecs': <module '_codecs' (built-in)>, 'nt': <module 'nt' (built-in)>, '_warnings': <module '_warnings' (built-in)>, 'genericpath': <module 'genericpath' from 'D:\Python27\lib\genericpath.pyc'>, 'stat': <module 'stat' from 'D:\Python27\lib\stat.pyc'>, 'zipimport': <module 'zipimport' (built-in)>, 'encodings.__builtin__': None, 'warnings': <module 'warnings' from 'D:\Python27\lib\warnings.pyc'>, 'UserDict': <module 'UserDict' from 'D:\Python27\lib\UserDict.pyc'>, 'encodings.cp1252': <module 'encodings.cp1252' from 'D:\Python27\lib\encodings\cp1252.pyc'>, 'sys': <module 'sys' (built-in)>, 'codecs': <module 'codecs' from 'D:\Python27\lib\codecs.pyc'>, 'os.path': <module 'ntpath' from 'D:\Python27\lib\ntpath.pyc'>, '_functools': <module '_functools' (built-in)>, '_locale': <module '_locale' (built-in)>, 'signal': <module 'signal' (built-in)>, 'traceback': <module 'traceback' from 'D:\Python27\lib\traceback.pyc'>, 'linecache': <module 'linecache' from 'D:\Python27\lib\linecache.pyc'>, 'encodings.aliases': <module 'encodings.aliases' from 'D:\Python27\lib\encodings\aliases.pyc'>, 'exceptions': <module 'exceptions' (built-in)>, 'sre_parse': <module 'sre_parse' from 'D:\Python27\lib\sre_parse.pyc'>, 'os': <module 'os' from 'D:\Python27\lib\os.pyc'>, '_weakref': <module '_weakref' (built-in)>}
+>>> import re
+>>> print sys.modules
+{'copy_reg': <module 'copy_reg' from 'D:\Python27\lib\copy_reg.pyc'>, 'sre_compile': <module 'sre_compile' from 'D:\Python27\lib\sre_compile.pyc'>, 'locale': <module 'locale' from 'D:\Python27\lib\locale.pyc'>, '_sre': <module '_sre' (built-in)>, 'functools': <module 'functools' from 'D:\Python27\lib\functools.pyc'>, 'encodings': <module 'encodings' from 'D:\Python27\lib\encodings\__init__.pyc'>, 'site': <module 'site' from 'D:\Python27\lib\site.pyc'>, '__builtin__': <module '__builtin__' (built-in)>, 'sysconfig': <module 'sysconfig' from 'D:\Python27\lib\sysconfig.pyc'>, 'operator': <module 'operator' (built-in)>, '__main__': <module '__main__' (built-in)>, 'types': <module 'types' from 'D:\Python27\lib\types.pyc'>, 'encodings.encodings': None, 'abc': <module 'abc' from 'D:\Python27\lib\abc.pyc'>, 'encodings.cp437': <module 'encodings.cp437' from 'D:\Python27\lib\encodings\cp437.pyc'>, '_weakrefset': <module '_weakrefset' from 'D:\Python27\lib\_weakrefset.pyc'>, 'errno': <module 'errno' (built-in)>, 'encodings.codecs': None, 'sre_constants': <module 'sre_constants' from 'D:\Python27\lib\sre_constants.pyc'>, 're': <module 're' from 'D:\Python27\lib\re.pyc'>, '_abcoll': <module '_abcoll' from 'D:\Python27\lib\_abcoll.pyc'>, 'ntpath': <module 'ntpath' from 'D:\Python27\lib\ntpath.pyc'>, '_codecs': <module '_codecs' (built-in)>, 'nt': <module 'nt' (built-in)>, '_warnings': <module '_warnings' (built-in)>, 'genericpath': <module 'genericpath' from 'D:\Python27\lib\genericpath.pyc'>, 'stat': <module 'stat' from 'D:\Python27\lib\stat.pyc'>, 'zipimport': <module 'zipimport' (built-in)>, 'encodings.__builtin__': None, 'warnings': <module 'warnings' from 'D:\Python27\lib\warnings.pyc'>, 'UserDict': <module 'UserDict' from 'D:\Python27\lib\UserDict.pyc'>, 'encodings.cp1252': <module 'encodings.cp1252' from 'D:\Python27\lib\encodings\cp1252.pyc'>, 'sys': <module 'sys' (built-in)>, 'codecs': <module 'codecs' from 'D:\Python27\lib\codecs.pyc'>, 'os.path': <module 'ntpath' from 'D:\Python27\lib\ntpath.pyc'>, '_functools': <module '_functools' (built-in)>, '_locale': <module '_locale' (built-in)>, 'signal': <module 'signal' (built-in)>, 'traceback': <module 'traceback' from 'D:\Python27\lib\traceback.pyc'>, 'linecache': <module 'linecache' from 'D:\Python27\lib\linecache.pyc'>, 'encodings.aliases': <module 'encodings.aliases' from 'D:\Python27\lib\encodings\aliases.pyc'>, 'exceptions': <module 'exceptions' (built-in)>, 'sre_parse': <module 'sre_parse' from 'D:\Python27\lib\sre_parse.pyc'>, 'os': <module 'os' from 'D:\Python27\lib\os.pyc'>, '_weakref': <module '_weakref' (built-in)>}
+
+>>> "re" in sys.modules
+True
+>>> "subprocess" in sys.modules
+False
+>>> import subprocess
+>>> "subprocess" in sys.modules
+True
+
+
+>>> "import_ex" in sys.modules
+False
+>>>
+^C
+D:\F DATA\python_class>python
+Python 2.7.15 (v2.7.15:ca079a3ea3, Apr 30 2018, 16:30:26) [MSC v.1500 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.path.append("D:\F DATA\python_class")
+>>> import import_ex
+('Loaded as module', 'import_ex')
+>>> "import_ex" in sys.modules
+True
