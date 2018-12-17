@@ -1,0 +1,163 @@
+D:\F DATA\python_class\module_packages\basics>python -O -m compileall Dict
+Listing Dict ...
+Compiling Dict\Dict_from_keys.py ...
+Compiling Dict\__init__.py ...
+Compiling Dict\dict_keyDict1_valDict2.py ...
+Compiling Dict\dict_menu_driven.py ...
+
+D:\F DATA\python_class\module_packages\basics>python -O -m compileall history
+Listing history ...
+Compiling history\__init__.py ...
+Compiling history\hello_world.py ...
+
+D:\F DATA\python_class\module_packages\basics>python -O -m compileall Lists
+Listing Lists ...
+Compiling Lists\List_CustomizeIndex.py ...
+Compiling Lists\List_Merge2Lists.py ...
+Compiling Lists\List_element_type.py ...
+Compiling Lists\List_nestedlist.py ...
+Compiling Lists\__init__.py ...
+
+D:\F DATA\python_class\module_packages\basics>python setup.py sdist
+running sdist
+running check
+warning: check: missing required meta-data: url
+
+warning: check: missing meta-data: either (author and author_email) or (maintainer and maintainer_email) must be supplied
+
+warning: sdist: manifest template 'MANIFEST.in' does not exist (using default file list)
+
+writing manifest file 'MANIFEST'
+creating basics-1.1
+creating basics-1.1\Dict
+creating basics-1.1\Lists
+creating basics-1.1\history
+copying files to basics-1.1...
+copying README.txt -> basics-1.1
+copying setup.py -> basics-1.1
+copying test.py -> basics-1.1
+copying Dict\Dict_from_keys.py -> basics-1.1\Dict
+copying Dict\__init__.py -> basics-1.1\Dict
+copying Dict\dict_keyDict1_valDict2.py -> basics-1.1\Dict
+copying Dict\dict_menu_driven.py -> basics-1.1\Dict
+copying Lists\List_CustomizeIndex.py -> basics-1.1\Lists
+copying Lists\List_Merge2Lists.py -> basics-1.1\Lists
+copying Lists\List_element_type.py -> basics-1.1\Lists
+copying Lists\List_nestedlist.py -> basics-1.1\Lists
+copying Lists\__init__.py -> basics-1.1\Lists
+copying history\__init__.py -> basics-1.1\history
+copying history\hello_world.py -> basics-1.1\history
+creating dist
+creating 'dist\basics-1.1.zip' and adding 'basics-1.1' to it
+adding 'basics-1.1\PKG-INFO'
+adding 'basics-1.1\README.txt'
+adding 'basics-1.1\setup.py'
+adding 'basics-1.1\test.py'
+adding 'basics-1.1\Dict\Dict_from_keys.py'
+adding 'basics-1.1\Dict\dict_keyDict1_valDict2.py'
+adding 'basics-1.1\Dict\dict_menu_driven.py'
+adding 'basics-1.1\Dict\__init__.py'
+adding 'basics-1.1\history\hello_world.py'
+adding 'basics-1.1\history\__init__.py'
+adding 'basics-1.1\Lists\List_CustomizeIndex.py'
+adding 'basics-1.1\Lists\List_element_type.py'
+adding 'basics-1.1\Lists\List_Merge2Lists.py'
+adding 'basics-1.1\Lists\List_nestedlist.py'
+adding 'basics-1.1\Lists\__init__.py'
+removing 'basics-1.1' (and everything under it)
+
+D:\F DATA\python_class\module_packages\basics>python setup.py bdist
+running bdist
+running bdist_dumb
+running build
+running build_py
+creating build
+creating build\lib
+copying test.py -> build\lib
+creating build\lib\history
+copying history\hello_world.py -> build\lib\history
+copying history\__init__.py -> build\lib\history
+creating build\lib\Dict
+copying Dict\Dict_from_keys.py -> build\lib\Dict
+copying Dict\dict_keyDict1_valDict2.py -> build\lib\Dict
+copying Dict\dict_menu_driven.py -> build\lib\Dict
+copying Dict\__init__.py -> build\lib\Dict
+creating build\lib\Lists
+copying Lists\List_CustomizeIndex.py -> build\lib\Lists
+copying Lists\List_element_type.py -> build\lib\Lists
+copying Lists\List_Merge2Lists.py -> build\lib\Lists
+copying Lists\List_nestedlist.py -> build\lib\Lists
+copying Lists\__init__.py -> build\lib\Lists
+installing to build\bdist.win-amd64\dumb
+running install
+running install_lib
+creating build\bdist.win-amd64
+creating build\bdist.win-amd64\dumb
+creating build\bdist.win-amd64\dumb\Python27
+creating build\bdist.win-amd64\dumb\Python27\Lib
+creating build\bdist.win-amd64\dumb\Python27\Lib\site-packages
+creating build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict
+copying build\lib\Dict\Dict_from_keys.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict
+copying build\lib\Dict\dict_keyDict1_valDict2.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict
+copying build\lib\Dict\dict_menu_driven.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict
+copying build\lib\Dict\__init__.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict
+creating build\bdist.win-amd64\dumb\Python27\Lib\site-packages\history
+copying build\lib\history\hello_world.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\history
+copying build\lib\history\__init__.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\history
+creating build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\Lists\List_CustomizeIndex.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\Lists\List_element_type.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\Lists\List_Merge2Lists.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\Lists\List_nestedlist.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\Lists\__init__.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists
+copying build\lib\test.py -> build\bdist.win-amd64\dumb\Python27\Lib\site-packages
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict\Dict_from_keys.py to Dict_from_keys.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict\dict_keyDict1_valDict2.py to dict_keyDict1_valDict2.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict\dict_menu_driven.py to dict_menu_driven.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Dict\__init__.py to __init__.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\history\hello_world.py to hello_world.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\history\__init__.py to __init__.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists\List_CustomizeIndex.py to List_CustomizeIndex.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists\List_element_type.py to List_element_type.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists\List_Merge2Lists.py to List_Merge2Lists.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists\List_nestedlist.py to List_nestedlist.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\Lists\__init__.py to __init__.pyc
+byte-compiling build\bdist.win-amd64\dumb\Python27\Lib\site-packages\test.py to test.pyc
+running install_egg_info
+Writing build\bdist.win-amd64\dumb\Python27\Lib\site-packages\basics-1.1-py2.7.egg-info
+creating 'D:\F DATA\python_class\module_packages\basics\dist\basics-1.1.win-amd64.zip' and adding '.' to it
+adding 'Python27\Lib\site-packages\basics-1.1-py2.7.egg-info'
+adding 'Python27\Lib\site-packages\test.py'
+adding 'Python27\Lib\site-packages\test.pyc'
+adding 'Python27\Lib\site-packages\Dict\Dict_from_keys.py'
+adding 'Python27\Lib\site-packages\Dict\Dict_from_keys.pyc'
+adding 'Python27\Lib\site-packages\Dict\dict_keyDict1_valDict2.py'
+adding 'Python27\Lib\site-packages\Dict\dict_keyDict1_valDict2.pyc'
+adding 'Python27\Lib\site-packages\Dict\dict_menu_driven.py'
+adding 'Python27\Lib\site-packages\Dict\dict_menu_driven.pyc'
+adding 'Python27\Lib\site-packages\Dict\__init__.py'
+adding 'Python27\Lib\site-packages\Dict\__init__.pyc'
+adding 'Python27\Lib\site-packages\history\hello_world.py'
+adding 'Python27\Lib\site-packages\history\hello_world.pyc'
+adding 'Python27\Lib\site-packages\history\__init__.py'
+adding 'Python27\Lib\site-packages\history\__init__.pyc'
+adding 'Python27\Lib\site-packages\Lists\List_CustomizeIndex.py'
+adding 'Python27\Lib\site-packages\Lists\List_CustomizeIndex.pyc'
+adding 'Python27\Lib\site-packages\Lists\List_element_type.py'
+adding 'Python27\Lib\site-packages\Lists\List_element_type.pyc'
+adding 'Python27\Lib\site-packages\Lists\List_Merge2Lists.py'
+adding 'Python27\Lib\site-packages\Lists\List_Merge2Lists.pyc'
+adding 'Python27\Lib\site-packages\Lists\List_nestedlist.py'
+adding 'Python27\Lib\site-packages\Lists\List_nestedlist.pyc'
+adding 'Python27\Lib\site-packages\Lists\__init__.py'
+adding 'Python27\Lib\site-packages\Lists\__init__.pyc'
+removing 'build\bdist.win-amd64\dumb' (and everything under it)
+
+D:\F DATA\python_class\module_packages\basics>
+
+cd dist; tar xvf basics-1.0.tar.gz; python setup.py install
+
+
+
+
+

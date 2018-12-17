@@ -1,0 +1,8 @@
+#logging set to ERROR
+ERROR:root:This message should go to the log file
+CRITICAL:root:This message should go to the log file
+
+#logging set to debug
+DEBUG:root:This message should go to the log file
+ERROR:root:This message should go to the log file
+CRITICAL:root:This message should go to the log file
